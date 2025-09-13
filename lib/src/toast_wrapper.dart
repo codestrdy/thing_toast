@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:thing_toast/src/toast_params.dart';
 import 'package:thing_toast/src/toast_type.dart';
@@ -94,24 +96,38 @@ class _ToastWrapperState extends State<ToastWrapper>
           physics: AlwaysScrollableScrollPhysics(
             parent: BouncingScrollPhysics(),
           ),
-          child: SafeArea(
-            child: Center(
-              child: Container(
-                margin: EdgeInsets.only(top: 8),
-                width: double.infinity,
-                child: ToastWidget(
-                  title: widget.title,
-                  type: widget.type,
-                  icon: widget.style.icon,
-                  showIcon: widget.showIcon,
-                  subtitle: widget.subtitle,
-                  subtitleMaxLines: widget.style.subtitleMaxLines,
-                  titleMaxLines: widget.style.titleMaxLines,
-                  subtitleTextStyle: widget.style.subtitleTextStyle,
-                  titleTextStyle: widget.style.titleTextStyle,
-                ),
-              ),
-            ),
+          child: _child,
+        ),
+      ),
+    );
+  }
+
+  // Child widget depends on Platform
+  Widget get _child {
+    if (Platform.isAndroid) {
+      return Material(color: Colors.transparent, child: _baseToast());
+    }
+
+    return _baseToast();
+  }
+
+  // Base Widget of the Toast Wrapper
+  Widget _baseToast() {
+    return SafeArea(
+      child: Center(
+        child: Container(
+          margin: EdgeInsets.only(top: 8),
+          width: double.infinity,
+          child: ToastWidget(
+            title: widget.title,
+            type: widget.type,
+            icon: widget.style.icon,
+            showIcon: widget.showIcon,
+            subtitle: widget.subtitle,
+            subtitleMaxLines: widget.style.subtitleMaxLines,
+            titleMaxLines: widget.style.titleMaxLines,
+            subtitleTextStyle: widget.style.subtitleTextStyle,
+            titleTextStyle: widget.style.titleTextStyle,
           ),
         ),
       ),

@@ -4,6 +4,10 @@ A package for showing fancy gradient toast in Flutter applications.
 
 Show 4 Type of Toast : Success, Info, Warning and Error.
 
+<p align='center'>
+    <img src="screenshots/ios-toast.gif" width="300" />
+</p>
+
 ## Getting started
 
 Add to your dependencies:

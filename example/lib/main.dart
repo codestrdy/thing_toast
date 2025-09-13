@@ -46,7 +46,7 @@ class HomePage extends StatelessWidget {
                 FilledButton(
                   onPressed: () {
                     ThingToast(context).success(
-                      title: 'This is Toast',
+                      title: 'This is Success Toast',
                       subtitle: 'This is the description',
                     );
                   },
@@ -55,7 +55,7 @@ class HomePage extends StatelessWidget {
                 FilledButton(
                   onPressed: () {
                     ThingToast(context).info(
-                      title: 'This is Toast',
+                      title: 'This is Information Toast',
                       subtitle: 'This is the description',
                     );
                   },
@@ -64,7 +64,7 @@ class HomePage extends StatelessWidget {
                 FilledButton(
                   onPressed: () {
                     ThingToast(context).warning(
-                      title: 'This is Toast',
+                      title: 'This is Warning Toast',
                       subtitle: 'This is the description',
                     );
                   },
@@ -73,7 +73,7 @@ class HomePage extends StatelessWidget {
                 FilledButton(
                   onPressed: () {
                     ThingToast(context).error(
-                      title: 'This is Toast',
+                      title: 'This is Error Toast',
                       subtitle: 'This is the description',
                     );
                   },
