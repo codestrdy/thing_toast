@@ -3,7 +3,7 @@ import 'package:iconsax_plus/iconsax_plus.dart';
 import 'package:thing_toast/src/colors.dart';
 
 /// Type of the Toast
-/// 
+///
 /// * `Success` : For success condition
 /// * `Info` : For information
 /// * `Warning` : For warning condition

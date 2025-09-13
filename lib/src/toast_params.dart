@@ -5,12 +5,16 @@ import 'package:thing_toast/src/toast_type.dart';
 class ToastStyle {
   /// Custom Title Text Style
   final TextStyle? titleTextStyle;
+
   /// Custom Subtitle Text Style
   final TextStyle? subtitleTextStyle;
+
   /// Title Max Lines, default is `3`
   final int titleMaxLines;
+
   /// Subtitle Max Lines, default is `3`
   final int subtitleMaxLines;
+
   /// Custom Suffix Icon
   final IconData? icon;
 
@@ -27,16 +31,22 @@ class ToastStyle {
 class ToastParams {
   /// Toast Title
   final String title;
+
   /// Duration of showing Toast
   final Duration duration;
+
   /// Curves Animation for Toast
   final Curve curve;
+
   /// Toast Subtitle
   final String? subtitle;
+
   /// Show Suffix Icon, default is `true`
   final bool showIcon;
+
   /// Type of the Toast
   final ToastType type;
+
   /// Addintional Style for Toast
   final ToastStyle style;
 
