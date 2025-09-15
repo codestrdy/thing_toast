@@ -1,5 +1,4 @@
-import 'package:flutter/widgets.dart';
-import 'package:iconsax_plus/iconsax_plus.dart';
+import 'package:flutter/material.dart';
 import 'package:thing_toast/src/colors.dart';
 
 /// Type of the Toast
@@ -9,10 +8,10 @@ import 'package:thing_toast/src/colors.dart';
 /// * `Warning` : For warning condition
 /// * `Error` : For error condition
 enum ToastType {
-  success(successColor, successGradient, IconsaxPlusBold.tick_circle),
-  info(infoColor, infoGradient, IconsaxPlusBold.lamp_on),
-  warning(warningColor, warningGradient, IconsaxPlusBold.info_circle),
-  error(errorColor, errorGradient, IconsaxPlusBold.close_circle);
+  success(successColor, successGradient, Icons.check_circle),
+  info(infoColor, infoGradient, Icons.lightbulb),
+  warning(warningColor, warningGradient, Icons.info_rounded),
+  error(errorColor, errorGradient, Icons.warning_rounded);
 
   final Color color;
   final IconData icon;

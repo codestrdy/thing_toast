@@ -1,3 +1,6 @@
+## 0.3.0
+* Remove `iconsax_plus` dependency.
+
 ## 0.2.0
 * Fix issue on Android Plafrom where Toast was not showing correctly.
 * Add support for iOS Platform.

@@ -1,6 +1,6 @@
 name: thing_toast
 description: "Package for Fancy Gradient Toast."
-version: 0.2.0
+version: 0.3.0
 repository: https://github.com/codestrdy/thing_toast
 
 environment:
@@ -10,7 +10,6 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  iconsax_plus: ^1.0.0
 
 dev_dependencies:
   flutter_test:
