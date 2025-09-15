@@ -8,14 +8,13 @@ import 'package:thing_toast/src/colors.dart';
 /// * `Warning` : For warning condition
 /// * `Error` : For error condition
 enum ToastType {
-  success(successColor, successGradient, Icons.check_circle),
-  info(infoColor, infoGradient, Icons.lightbulb),
-  warning(warningColor, warningGradient, Icons.info_rounded),
-  error(errorColor, errorGradient, Icons.warning_rounded);
+  success(successColor, successGradient),
+  info(infoColor, infoGradient),
+  warning(warningColor, warningGradient),
+  error(errorColor, errorGradient);
 
   final Color color;
-  final IconData icon;
   final LinearGradient gradient;
 
-  const ToastType(this.color, this.gradient, this.icon);
+  const ToastType(this.color, this.gradient);
 }

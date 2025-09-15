@@ -1,6 +1,6 @@
 name: thing_toast
 description: "Package for Fancy Gradient Toast."
-version: 0.3.0
+version: 0.4.0
 repository: https://github.com/codestrdy/thing_toast
 
 environment:

@@ -13,7 +13,7 @@ class ToastWrapper extends StatefulWidget {
     required this.duration,
     required this.curve,
     this.subtitle,
-    required this.showIcon,
+    this.icon,
     required this.onDismiss,
     required this.type,
     required this.style,
@@ -23,7 +23,7 @@ class ToastWrapper extends StatefulWidget {
   final Duration duration;
   final Curve curve;
   final String? subtitle;
-  final bool showIcon;
+  final Widget? icon;
   final VoidCallback onDismiss;
   final ToastType type;
   final ToastStyle style;
@@ -121,8 +121,7 @@ class _ToastWrapperState extends State<ToastWrapper>
           child: ToastWidget(
             title: widget.title,
             type: widget.type,
-            icon: widget.style.icon,
-            showIcon: widget.showIcon,
+            icon: widget.icon,
             subtitle: widget.subtitle,
             subtitleMaxLines: widget.style.subtitleMaxLines,
             titleMaxLines: widget.style.titleMaxLines,

@@ -41,8 +41,8 @@ class ThingToast {
           title: params.title,
           duration: params.duration,
           curve: params.curve,
-          showIcon: params.showIcon,
           subtitle: params.subtitle,
+          icon: params.icon,
           onDismiss: () {
             overlay?.remove();
             overlay = null;
@@ -65,17 +65,17 @@ class ThingToast {
     required Duration duration,
     required Curve curve,
     String? subtitle,
+    Widget? icon,
     required ToastStyle style,
-    bool showIcon = true,
   }) {
     final toast = ToastParams(
       title: title,
       duration: duration,
       curve: curve,
       type: type,
-      showIcon: showIcon,
       style: style,
       subtitle: subtitle,
+      icon: icon,
     );
 
     _enqueue(toast);
@@ -92,17 +92,17 @@ class ThingToast {
     Duration duration = const Duration(seconds: 3),
     Curve curve = Curves.easeInExpo,
     String? subtitle,
+    Widget? icon,
     ToastStyle style = const ToastStyle(),
-    bool showIcon = true,
   }) {
     _showToast(
       type: ToastType.success,
       title: title,
       curve: curve,
       duration: duration,
-      showIcon: showIcon,
       style: style,
       subtitle: subtitle,
+      icon: icon,
     );
   }
 
@@ -117,17 +117,17 @@ class ThingToast {
     Duration duration = const Duration(seconds: 3),
     Curve curve = Curves.easeInExpo,
     String? subtitle,
+    Widget? icon,
     ToastStyle style = const ToastStyle(),
-    bool showIcon = true,
   }) {
     _showToast(
       type: ToastType.info,
       title: title,
       curve: curve,
       duration: duration,
-      showIcon: showIcon,
       style: style,
       subtitle: subtitle,
+      icon: icon,
     );
   }
 
@@ -142,17 +142,17 @@ class ThingToast {
     Duration duration = const Duration(seconds: 3),
     Curve curve = Curves.easeInExpo,
     String? subtitle,
+    Widget? icon,
     ToastStyle style = const ToastStyle(),
-    bool showIcon = true,
   }) {
     _showToast(
       type: ToastType.warning,
       title: title,
       curve: curve,
       duration: duration,
-      showIcon: showIcon,
       style: style,
       subtitle: subtitle,
+      icon: icon,
     );
   }
 
@@ -167,17 +167,17 @@ class ThingToast {
     Duration duration = const Duration(seconds: 3),
     Curve curve = Curves.easeInExpo,
     String? subtitle,
+    Widget? icon,
     ToastStyle style = const ToastStyle(),
-    bool showIcon = true,
   }) {
     _showToast(
       type: ToastType.error,
       title: title,
       curve: curve,
       duration: duration,
-      showIcon: showIcon,
       style: style,
       subtitle: subtitle,
+      icon: icon,
     );
   }
 }

@@ -15,15 +15,11 @@ class ToastStyle {
   /// Subtitle Max Lines, default is `3`
   final int subtitleMaxLines;
 
-  /// Custom Suffix Icon
-  final IconData? icon;
-
   const ToastStyle({
     this.titleTextStyle,
     this.subtitleTextStyle,
     this.titleMaxLines = 3,
     this.subtitleMaxLines = 3,
-    this.icon,
   });
 }
 
@@ -41,21 +37,21 @@ class ToastParams {
   /// Toast Subtitle
   final String? subtitle;
 
-  /// Show Suffix Icon, default is `true`
-  final bool showIcon;
-
   /// Type of the Toast
   final ToastType type;
 
-  /// Addintional Style for Toast
+  /// Additional Style for Toast
   final ToastStyle style;
+
+  /// Additional Suffix Icon for Toast
+  final Widget? icon;
 
   const ToastParams({
     required this.title,
     required this.duration,
     required this.curve,
     this.subtitle,
-    this.showIcon = true,
+    this.icon,
     required this.type,
     this.style = const ToastStyle(),
   });

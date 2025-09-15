@@ -1,3 +1,6 @@
+## 0.4.0
+* Add Custom Widget Icon parameters.
+
 ## 0.3.0
 * Remove `iconsax_plus` dependency.
 

@@ -11,7 +11,6 @@ class ToastWidget extends StatelessWidget {
     this.subtitle,
     this.titleTextStyle,
     this.subtitleTextStyle,
-    this.showIcon = true,
     this.titleMaxLines = 3,
     this.subtitleMaxLines = 3,
     this.icon,
@@ -23,8 +22,7 @@ class ToastWidget extends StatelessWidget {
   final TextStyle? subtitleTextStyle;
   final int titleMaxLines;
   final int subtitleMaxLines;
-  final bool showIcon;
-  final IconData? icon;
+  final Widget? icon;
   final ToastType type;
 
   @override
@@ -44,7 +42,7 @@ class ToastWidget extends StatelessWidget {
       child: Row(
         spacing: 12,
         children: [
-          ?_icon,
+          ?icon,
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -79,10 +77,5 @@ class ToastWidget extends StatelessWidget {
       overflow: TextOverflow.ellipsis,
       maxLines: subtitleMaxLines,
     );
-  }
-
-  Widget? get _icon {
-    if (!showIcon) return null;
-    return Icon(icon ?? type.icon, size: 32, color: type.color);
   }
 }
